@@ -1,0 +1,201 @@
+.clock {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-frame {
+  display: flex;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background-color: rgb(156, 156, 156);
+  border-radius: 300px;
+  border: 5px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-clock-bg {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background-color: white;
+  border-radius: 275px;
+  border: 3px solid rgb(59, 59, 59);
+}
+
+.inner-clock-mask {
+  content: "";
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  border-radius: 250px;
+  left: 25px;
+  top: 25px;
+}
+
+.hour-mark-12 {
+  position: absolute;
+  top: 0;
+  left: 273px;
+  margin-top: 3px;
+  width: 4px;
+  height: 10px;
+  background-color: black;
+}
+
+.num12 {
+  position: absolute;
+  top: 0;
+  left: 245px;
+  font-size: 3.2rem;
+  margin-top: 6px;
+  font-family: "PT serif", serif;
+}
+
+.hour-mark-3 {
+  position: absolute;
+  top: 273px;
+  right: 0;
+  margin-right: 3px;
+  width: 10px;
+  height: 4px;
+  background-color: black;
+}
+
+.num3 {
+  position: absolute;
+  top: 245px;
+  right: 0;
+  margin-right: 13px;
+  font-size: 3.2rem;
+  font-family: "PT serif", serif;
+}
+
+.hour-mark-6 {
+  position: absolute;
+  bottom: 0;
+  left: 273px;
+  margin-bottom: 3px;
+  width: 4px;
+  height: 10px;
+  background-color: black;
+}
+
+.num6 {
+  position: absolute;
+  bottom: 0;
+  left: 260px;
+  font-size: 3.2rem;
+  margin-bottom: 6px;
+  font-family: "PT serif", serif;
+}
+
+.hour-mark-9 {
+  position: absolute;
+  top: 273px;
+  left: 0;
+  margin-left: 3px;
+  width: 10px;
+  height: 4px;
+  background-color: black;
+}
+.num9 {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  margin-left: 13px;
+  font-size: 3.2rem;
+  font-family: "PT serif", serif;
+}
+
+.hour-mark-1_7 {
+  position: absolute;
+  top: 0;
+  left: 273px;
+  transform: rotate(30deg);
+  width: 4px;
+  height: 100%;
+
+  background-color: black;
+}
+
+.hour-mark-2_8 {
+  position: absolute;
+  top: 0;
+  left: 273px;
+  transform: rotate(60deg);
+  width: 4px;
+  height: 100%;
+
+  background-color: black;
+}
+
+.hour-mark-4_10 {
+  position: absolute;
+  top: 0;
+  left: 273px;
+  transform: rotate(120deg);
+  width: 4px;
+  height: 100%;
+
+  background-color: black;
+}
+
+.hour-mark-5_11 {
+  position: absolute;
+  top: 0;
+  left: 273px;
+  transform: rotate(150deg);
+  width: 4px;
+  height: 100%;
+
+  background-color: black;
+}
+.minute-stick {
+  position: absolute;
+  width: 14px;
+  height: 215px;
+  border: 0.5px solid rgb(255, 255, 3);
+  background-color: navy;
+  border-radius: 7px;
+  left: 268px;
+  top: 60px;
+  /* transform: rotate(0deg); */
+  transform-origin: bottom center;
+}
+.hour-stick {
+  position: absolute;
+  width: 14px;
+  height: 150px;
+  border: 0.5px solid rgb(255, 255, 3);
+  background-color: navy;
+  border-radius: 7px;
+  left: 268px;
+  top: 125px;
+  /* transform: rotate(90deg); */
+  transform-origin: bottom center;
+}
+.seconds-stick {
+  position: absolute;
+  width: 4px;
+  height: 310px;
+  background-color: red;
+  border-radius: 7px;
+  left: 274px;
+  top: 20px;
+  /* transform: rotate(180deg); */
+  transform-origin: 50% 82.2583%;
+}
+.sticks-mask {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: blue;
+  border-radius: 15px;
+  left: 260px;
+  top: 260px;
+}

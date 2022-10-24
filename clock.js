@@ -21,14 +21,13 @@ setInterval(() => {
   secondsStick.style.transform = `rotate(${secStickMove}deg)`;
 
   //minute and hour stick movement
-  if (secStickMove == 0 || clicked) {
+  if (secStickMove == 0) {
     if (minStickMove < 354) {
       minStickMove += 6;
     } else {
       minStickMove = 0;
     }
     minuteStick.style.transform = `rotate(${minStickMove}deg)`;
-    clicked = false;
 
     if (hrStickMove < 354) {
       hrStickMove += 0.5;
@@ -39,5 +38,42 @@ setInterval(() => {
   }
 }, 1000);
 
-let clock = document.querySelector("");
-clock.addEventListener("click", () => {});
+let settings = document.querySelector(".clock-setting-container");
+
+settings.addEventListener("mousedown", (e) => {
+  let mouseDownEvent = setInterval(() => {
+    if (e.target.classList.contains("adjust-clockwise")) {
+      if (minStickMove < 354) {
+        minStickMove += 6;
+      } else {
+        minStickMove = 0;
+      }
+      minuteStick.style.transform = `rotate(${minStickMove}deg)`;
+      if (hrStickMove < 354) {
+        hrStickMove += 0.5;
+      } else {
+        hrStickMove = 0;
+      }
+      hourStick.style.transform = `rotate(${hrStickMove}deg)`;
+    }
+
+    if (e.target.classList.contains("adjust-anticlockwise")) {
+      if (minStickMove < 354) {
+        minStickMove -= 6;
+      } else {
+        minStickMove = 0;
+      }
+      minuteStick.style.transform = `rotate(${minStickMove}deg)`;
+      if (hrStickMove < 354) {
+        hrStickMove -= 0.5;
+      } else {
+        hrStickMove = 0;
+      }
+      hourStick.style.transform = `rotate(${hrStickMove}deg)`;
+    }
+
+    settings.addEventListener("click", () => {
+      clearInterval(mouseDownEvent);
+    });
+  }, 400);
+});

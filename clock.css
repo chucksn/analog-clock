@@ -2,17 +2,18 @@
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .clock-frame {
   display: flex;
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   background-color: rgb(156, 156, 156);
-  border-radius: 300px;
-  border: 5px solid black;
+  border-radius: 40px;
+  border: 4px solid black;
   justify-content: center;
   align-items: center;
 }
@@ -21,7 +22,7 @@
   position: absolute;
   width: 550px;
   height: 550px;
-  background-color: white;
+  background-color: rgb(215, 228, 233);
   border-radius: 275px;
   border: 3px solid rgb(59, 59, 59);
 }
@@ -30,7 +31,7 @@
   content: "";
   width: 500px;
   height: 500px;
-  background-color: white;
+  background-color: rgb(215, 228, 233);
   position: absolute;
   border-radius: 250px;
   left: 25px;
@@ -158,25 +159,34 @@
 .minute-stick {
   position: absolute;
   width: 14px;
-  height: 215px;
-  border: 0.5px solid rgb(255, 255, 3);
+  height: 180px;
   background-color: navy;
-  border-radius: 7px;
   left: 268px;
-  top: 60px;
-  /* transform: rotate(0deg); */
+  top: 95px;
   transform-origin: bottom center;
 }
+
+.minute-stick-head {
+  position: absolute;
+  bottom: 268px;
+  left: -10px;
+
+  width: 0;
+  height: 0;
+  border-left: 17.5px solid transparent;
+  border-right: 17.5px solid transparent;
+  border-bottom: 40px solid blue;
+  border-radius: 0 0 12px 12px;
+}
+
 .hour-stick {
   position: absolute;
   width: 14px;
-  height: 150px;
-  border: 0.5px solid rgb(255, 255, 3);
+  height: 130px;
+  border: 0.5px solid rgb(219, 219, 0);
   background-color: navy;
-  border-radius: 7px;
   left: 268px;
-  top: 125px;
-  /* transform: rotate(90deg); */
+  top: 145px;
   transform-origin: bottom center;
 }
 .seconds-stick {
@@ -187,7 +197,6 @@
   border-radius: 7px;
   left: 274px;
   top: 20px;
-  /* transform: rotate(180deg); */
   transform-origin: 50% 82.2583%;
 }
 .sticks-mask {
@@ -198,4 +207,12 @@
   border-radius: 15px;
   left: 260px;
   top: 260px;
+}
+
+.clock-setting-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: aqua;
+  justify-content: space-around;
 }

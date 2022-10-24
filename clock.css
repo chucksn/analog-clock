@@ -168,26 +168,34 @@
 
 .minute-stick-head {
   position: absolute;
-  bottom: 268px;
-  left: -10px;
-
-  width: 0;
-  height: 0;
-  border-left: 17.5px solid transparent;
-  border-right: 17.5px solid transparent;
-  border-bottom: 40px solid blue;
-  border-radius: 0 0 12px 12px;
+  bottom: 180px;
+  left: -5px;
+  width: 24px;
+  height: 40px;
+  background-color: blue;
+  border-radius: 50% 50% 0 0;
 }
 
 .hour-stick {
   position: absolute;
   width: 14px;
-  height: 130px;
-  border: 0.5px solid rgb(219, 219, 0);
+  height: 120px;
   background-color: navy;
   left: 268px;
-  top: 145px;
+  top: 155px;
   transform-origin: bottom center;
+}
+
+.hour-stick-head {
+  position: absolute;
+  bottom: 120px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 40px solid blue;
+  border-radius: 0 0 12px 12px;
 }
 .seconds-stick {
   position: absolute;

@@ -1,18 +1,37 @@
-.clock {
+* {
+  box-sizing: border-box;
+}
+
+body {
   height: 100vh;
-  width: 100vw;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(images/clock.jpg) no-repeat fixed center center;
+  z-index: -1;
+  opacity: 1;
+}
+.clock {
+  position: absolute;
+  height: 700px;
+  width: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  /* background-color: lightpink; */
 }
 .clock-frame {
   display: flex;
-  position: relative;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: rgb(156, 156, 156);
-  border-radius: 40px;
+  border-radius: 50%;
   border: 4px solid black;
   justify-content: center;
   align-items: center;
@@ -45,13 +64,14 @@
   margin-top: 3px;
   width: 4px;
   height: 10px;
-  background-color: black;
+  background-color: navy;
 }
 
 .num12 {
   position: absolute;
   top: 0;
   left: 245px;
+  color: blue;
   font-size: 3.2rem;
   margin-top: 6px;
   font-family: "PT serif", serif;
@@ -64,7 +84,7 @@
   margin-right: 3px;
   width: 10px;
   height: 4px;
-  background-color: black;
+  background-color: navy;
 }
 
 .num3 {
@@ -72,6 +92,7 @@
   top: 245px;
   right: 0;
   margin-right: 13px;
+  color: blue;
   font-size: 3.2rem;
   font-family: "PT serif", serif;
 }
@@ -83,13 +104,14 @@
   margin-bottom: 3px;
   width: 4px;
   height: 10px;
-  background-color: black;
+  background-color: navy;
 }
 
 .num6 {
   position: absolute;
   bottom: 0;
   left: 260px;
+  color: blue;
   font-size: 3.2rem;
   margin-bottom: 6px;
   font-family: "PT serif", serif;
@@ -102,12 +124,13 @@
   margin-left: 3px;
   width: 10px;
   height: 4px;
-  background-color: black;
+  background-color: navy;
 }
 .num9 {
   position: absolute;
   top: 240px;
   left: 0;
+  color: blue;
   margin-left: 13px;
   font-size: 3.2rem;
   font-family: "PT serif", serif;
@@ -121,7 +144,7 @@
   width: 4px;
   height: 100%;
 
-  background-color: black;
+  background-color: navy;
 }
 
 .hour-mark-2_8 {
@@ -132,7 +155,7 @@
   width: 4px;
   height: 100%;
 
-  background-color: black;
+  background-color: navy;
 }
 
 .hour-mark-4_10 {
@@ -143,7 +166,7 @@
   width: 4px;
   height: 100%;
 
-  background-color: black;
+  background-color: navy;
 }
 
 .hour-mark-5_11 {
@@ -154,13 +177,15 @@
   width: 4px;
   height: 100%;
 
-  background-color: black;
+  background-color: navy;
 }
 .minute-stick {
   position: absolute;
   width: 14px;
   height: 180px;
   background-color: navy;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
   left: 268px;
   top: 95px;
   transform-origin: bottom center;
@@ -169,10 +194,10 @@
 .minute-stick-head {
   position: absolute;
   bottom: 180px;
-  left: -5px;
+  left: -7px;
   width: 24px;
   height: 40px;
-  background-color: blue;
+  background-color: rgb(1, 92, 1);
   border-radius: 50% 50% 0 0;
 }
 
@@ -181,6 +206,8 @@
   width: 14px;
   height: 120px;
   background-color: navy;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
   left: 268px;
   top: 155px;
   transform-origin: bottom center;
@@ -189,12 +216,12 @@
 .hour-stick-head {
   position: absolute;
   bottom: 120px;
-  left: -10px;
+  left: -12px;
   width: 0;
   height: 0;
   border-left: 17px solid transparent;
   border-right: 17px solid transparent;
-  border-bottom: 40px solid blue;
+  border-bottom: 40px solid rgb(1, 92, 1);
   border-radius: 0 0 12px 12px;
 }
 .seconds-stick {
@@ -221,6 +248,25 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: aqua;
   justify-content: space-around;
+}
+
+.clock-setting-container > button {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+  border-radius: 6px;
+  background-color: rgb(87, 87, 87);
+  border: none;
+}
+
+.clock-setting-container > button:hover {
+  cursor: pointer;
+  background-color: rgb(31, 30, 30);
+}
+
+.clock-setting-container > button:active {
+  cursor: progress;
+  background-color: navy;
 }

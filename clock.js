@@ -72,7 +72,7 @@ settings.addEventListener("mousedown", (e) => {
       hourStick.style.transform = `rotate(${hrStickMove}deg)`;
     }
 
-    settings.addEventListener("click", () => {
+    settings.addEventListener("mouseup", () => {
       clearInterval(mouseDownEvent);
     });
   }, 400);

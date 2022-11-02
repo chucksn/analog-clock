@@ -82,3 +82,35 @@ adjust.addEventListener("click", (e) => {
     settings.style.display = "flex";
   }
 });
+
+let portfolioTxtContainer = document.querySelector(".portfolio-text-container");
+let delay = 1;
+for (let child of portfolioTxtContainer.children) {
+  child.style.animation = `text-visibility 0.5s ease ${delay}s 1 normal forwards`;
+  delay += 0.2;
+}
+
+let projTextContainer = document.querySelector(".project-text-container");
+let delay1 = 8;
+for (let child of projTextContainer.children) {
+  child.style.animation = `text-visibility 5s ease ${delay1}s 1 normal forwards`;
+  delay1 += 0.5;
+}
+
+let textContainer = document.querySelector(".text-container");
+textContainer.style.animation = `text-movement 5s ease 3s 1 normal forwards`;
+
+let arrowDownLink = document.querySelector(".down-arrow-container");
+arrowDownLink.addEventListener("click", () => {
+  document.location.href = "#right";
+});
+
+let arrowUpLink = document.querySelector(".up-arrow-container");
+arrowUpLink.addEventListener("click", () => {
+  document.location.href = "#left";
+});
+
+// arrow down appearance animation
+setTimeout(() => {
+  arrowDownLink.style.display = "block";
+}, 10000);

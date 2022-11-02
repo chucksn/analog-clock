@@ -109,8 +109,3 @@ let arrowUpLink = document.querySelector(".up-arrow-container");
 arrowUpLink.addEventListener("click", () => {
   document.location.href = "#left";
 });
-
-// arrow down appearance animation
-setTimeout(() => {
-  arrowDownLink.style.display = "block";
-}, 10000);

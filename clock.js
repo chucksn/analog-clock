@@ -83,18 +83,11 @@ adjust.addEventListener("click", (e) => {
   }
 });
 
-let portfolioTxtContainer = document.querySelector(".portfolio-text-container");
+let analogTxtContainer = document.querySelector(".analog-text-container");
 let delay = 1;
-for (let child of portfolioTxtContainer.children) {
+for (let child of analogTxtContainer.children) {
   child.style.animation = `text-visibility 0.5s ease ${delay}s 1 normal forwards`;
   delay += 0.2;
-}
-
-let projTextContainer = document.querySelector(".project-text-container");
-let delay1 = 8;
-for (let child of projTextContainer.children) {
-  child.style.animation = `text-visibility 5s ease ${delay1}s 1 normal forwards`;
-  delay1 += 0.5;
 }
 
 let textContainer = document.querySelector(".text-container");

@@ -8,7 +8,7 @@ body {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)) no-repeat
       fixed center center/cover,
-    url(images/clock.jpg) no-repeat fixed center center/cover;
+    url(assets/clock.jpg) no-repeat fixed center center/cover;
   width: 100vw;
   height: 100vh;
 }

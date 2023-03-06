@@ -40,7 +40,6 @@ body {
 }
 
 .analog-text-container > span {
-  font-size: 7rem;
   font-weight: 700;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -420,6 +419,22 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  .analog-text-container > span {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .analog-text-container > span {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (700px<= width<= 1023px) {
+  .analog-text-container > span {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1900px) {
@@ -496,6 +511,10 @@ body {
 
   body {
     padding-top: 0;
+  }
+
+  .analog-text-container > span {
+    font-size: 2rem;
   }
 }
 
